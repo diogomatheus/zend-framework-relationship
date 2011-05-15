@@ -1,0 +1,23 @@
+<h3>Lista de usuários</h3>
+<?php foreach($this->users as $user): ?>
+<p><?php echo $user->name; ?></p>
+<?php endforeach; ?>
+
+<h3>Lista de produtos</h3>
+<?php foreach($this->products as $product): ?>
+<p><?php echo $product->name; ?></p>
+<?php endforeach; ?>
+
+<h3>Produtos adicionados por "Diogo Matheus"</h3>
+<?php foreach($this->diogo_products as $product): ?>
+<p><?php echo $product->name; ?></p>
+<?php endforeach; ?>
+
+<h3>Quem cadastrou o produto "Casaco"?</h3>
+<p><?php echo $this->casaco_user->name; ?></p>
+
+<h3>Detalhando um pedido</h3>
+<p>Usuário: <?php echo $this->pedido_user->name; ?>, Data do pedido: <?php echo $this->pedido->create_date; ?></p>
+<?php foreach($this->pedido_produtos as $produto): ?>
+<p>Produto: <?php echo $produto->name; ?></p>
+<?php endforeach; ?>
